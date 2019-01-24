@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Update{% endblock %}
+
+{% block content %}
+    <div class="post gradient pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <!-- postDetails -->
+                    <div class="postDetails bg-white pb-5 mb-3">
+                        <h1 class="display-6 text-center pt-3">Edit Post</h1> <hr>
+
+                        <form class="form" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="">Title</label>
+                                {{form.title}}
+                            </div>
+                            <div class="form-group">
+                                <label for="">Category</label>
+                                {{form.category}}
+                            </div>
+                            <div class="form-group">
+                                <label for="">Content</label>
+                                {{form.content}}
+                            </div>
+                            <div class="form-group">
+                                <label for="">Publish</label>
+                                {{form.published}}
+                            </div>
+                            <div class="form-group">
+                                <label>Upload Image</label>
+                                {{form.image}}
+                            </div>
+
+                            <button class="btn btn-dark mt-3" type="submit">Update Post</button>
+                        </form>
+                    </div>
+                    <!-- postDetails -->
+                </div>
+{#                <div class="col-xs-12 col-md-4">#}
+{#                    <!-- about you -->#}
+{#                    <div class="about bg-dark">#}
+{#                        <div class="about-header">#}
+{#                            <h1 class="display-6 text-center text-warning te pt-3">Articles</h1>#}
+{#                        </div><hr>#}
+{#                        <div class="article-list bg-dar">#}
+{#                            <ul class="list-group mb-4">#}
+{#                                {% for post in all_posts %}#}
+{#                                    <li><a href="{% url 'details' post.id %}">{{post.title}}</a></li>#}
+{#                                {% endfor %}#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <!-- about you -->#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+{% endblock %}

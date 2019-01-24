@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}DevsCave{% endblock %}</title>
+
+{% block content %}
+    <!-- header image -->
+    <div class="showcase bg-white">
+        <div class="showcase-content">
+
+            {% if request.user.is_authenticated %}
+            <h1 class="title text-center">Publish Your <a class="gradient text-white px-3" href="{% url 'create' %}" style="font-family: 'Baloo Bhaijaan'; border-radius: 10px; color:white">Blog Now</a></h1>
+            {% else %}
+            <h1 class="title text-center">Publish Your <a class="gradient text-white px-3" href="{% url 'signup' %}" style="font-family: 'Baloo Bhaijaan'; border-radius: 10px; color:white">Blog Now</a></h1>
+            {% endif %}
+
+            
+            <form class="search input-group mt-5" method="GET" action="{% url 'home' %}">
+                <input type="text" name='q' class="form-control" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
+                <br>
+                {% include 'posts/messages_display.html' %}
+            </form>
+        </div>
+    </div>
+
+    <!-- main-body -->
+    <div class="main-content bg-white">
+        <div class="container">
+            <div class="row">
+                <!-- Articles -->
+                <div class="col-sm-12 col-md-8">
+                    <h1 class="text-dark mt-5">Articles</h1><hr>
+                    <div class="article pb-5">
+
+                        {% for obj in posts %}
+
+                                <div class="article-header">
+                                    <h2 class="display-6 text-capitalize"> {{obj.title}} </h2>
+                                    <a href="{% url 'profile-detail' obj.user.id %}"><p>{{ obj.user.profile_name }}</p></a>
+                                </div>
+                                <div class="article-body text-justify">
+                                    <p class="lead text-dark">{{ obj.content|linebreaks|truncatechars:300 }}</p>
+                                </div>
+                                <a href="{% url 'details' obj.id %}" target="_blank" class="btn btn-dark btn-sm mb-5">read more</a>
+
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- Articles -->
+
+                <!-- Videos -->
+                <div class="col-sm-12 col-md-4">
+                    <h1 class="text-dark text-center mt-5">Videos</h1> <hr>
+                    <div class="box mb-5">
+                        <div class="card">
+                            <iframe width="100%" height="200px" src="https://www.youtube.com/embed/D6esTdOLXh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="box mb-5">
+                        <div class="card">
+                            <iframe width="100%" height="200px" src="https://www.youtube.com/embed/1F_OgqRuSdI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="box mb-5">
+                        <div class="card">
+                            <iframe width="100%" height="200px" src="https://www.youtube.com/embed/kWmX3pd1f10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="box mb-5">
+                        <div class="card">
+                            <iframe width="100%" height="200px" src="https://www.youtube.com/embed/0QNiZfSsPc0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="box mb-5">
+                        <div class="card">
+                            <iframe width="100%" height="200px" src="https://www.youtube.com/embed/zKhm89FWOy8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="box mb-5">
+                        <div class="card">
+                           <iframe width="100%" height="200px" src="https://www.youtube.com/embed/zcikLQZI5wQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+{#                    <div class="box mb-5">#}
+{#                        <div class="card">#}
+{#                            <iframe class="card-iframe-top" width="100%" height="200px" src="https://www.youtube.com/embed/zlVm3P9xSVY?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="box mb-5">#}
+{#                        <div class="card">#}
+{#                            <iframe class="card-iframe-top" width="100%" height="200px" src="https://www.youtube.com/embed/zlVm3P9xSVY?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+                <!-- Videos -->
+
+            </div>
+                <!-- Paginator -->
+                {% include "posts/pagination.html" with page=posts %}
+                <!-- Paginator -->
+        </div>
+    </div>
+    <!-- main-body -->
+
+{% endblock %}

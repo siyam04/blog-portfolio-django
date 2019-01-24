@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}No Profile{% endblock %}
+
+{% block content %}
+    <br>
+    <h2>Weclcome <b style="color: orangered">{{request.user.first_name}} {{request.user.last_name}}</b>!</h2>
+        <h3> You don't have any Profile yet</h3><br>
+        <hr>
+        <h4><a href="{% url 'profile-create' %}">Create </a> Your Profile</h4>
+{% endblock %}

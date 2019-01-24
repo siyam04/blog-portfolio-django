@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Authors{% endblock %}
+
+{% block content %}
+
+    <div class="post gradient pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-12 mb-3">
+                
+                    <div class="about bg-dark text-center">
+                        <div class="about-header">
+                            <h1 class="display-6 text-warning pt-3">All Authors</h1>
+                        </div><hr>
+                        <div class="article-list px-1">
+                            <ul class="list-group mb-4 ">
+                                {% for authors in all_authors %}
+                                    {% if authors.profile.post.all %}
+                                        <li><a href="{% url 'profile-detail' authors.profile.id %}" style="font-weight: bold">{{ authors.first_name }} {{ authors.last_name }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

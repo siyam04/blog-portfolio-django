@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribe</title>
+</head>
+
+<body>
+    <H2>Newsletter</H2>
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div {% if message.tags %} class="{{ message.tags }}" {% endif %} role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
+        {% else %}
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Subscribe</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

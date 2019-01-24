@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800|Nunito');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.facebook { background-color: #4267B2; }
+.linkedin { background-color: #0073B2; }
+.twitter { background-color: #1DA1F2; }
+.instagram { background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF); }
+
+.lightBlue { background-color: rgb(230, 249, 255); }
+.bgc { background-color: #f6fdff; }
+.lightOrange { background-color: #F28C20; }
+.floatNone { float: none; }
+.listNone { list-style: none; }
+
+.text-yellow { color: #f1c40f; }
+
+.skewed-top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  border-width: 50px 630px 0px 630px;
+  border-color: transparent rgb(20, 25, 34) transparent rgb(20, 25, 34);
+  border-style: solid;
+}
+
+
+section .sec1.educations::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: coral;
+  z-index: 99;
+}
+
+/* /////////////////////////// */
+
+.showcase {
+  background-image: url(/static/images/img5.jpeg);
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.content-heading {
+  color: rgb(33, 35, 44);
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.content-heading h1 {
+  font-size: 2.8rem;
+  font-family: 'Montserrat';
+}
+#joy-form .content-heading span {
+  font-size: 2.8rem;
+  font-family: 'Montserrat';
+  /* text-shadow: 2px 2px 4px #000000; */
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+section.sec1 {
+  background-color: rgb(20, 25, 34);
+  position: relative;
+}
+section.sec2 {
+  background-color: #EDEDED;
+  position: relative;
+}
+#siyam-form .sec1 h1 {
+  color: #2ecc71;
+}
+#siyam-form section.sec2 { 
+  background-color: #2ecc71;
+ }
+#siyam-form input, #siyam-form textarea {
+  background: transparent;
+  border: 1px solid rgb(20, 25, 34);
+  color: #121020;
+}
+#siyam-form ::placeholder {
+  color: #121020 ;
+}
+
+#joy-form .sec1 h1, 
+#joy-form .sec1 h4, 
+#joy-form .sec1 h6  { 
+  color: #f1c40f; 
+}
+
+#joy-form section.sec2 { background-color: #f1c40f; }
+#joy-form input, #joy-form textarea {
+  background: transparent;
+  border: 1px solid rgb(20, 25, 34);
+  color: #121020;
+}
+#joy-form ::placeholder {
+  color: #121020 ;
+}
+.sec1 h1, .sec1 h4 {
+  text-shadow: 2px 2px 4px rgb(0, 0, 0.5);
+}
+
+.sec1 h1, .sec2 h1 {
+  font-size: 3rem;
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.sec1 h5, .sec2 h5, .sec1 h6, .sec2 h6 {
+  font-weight: bold;
+}
+p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.about .photo {
+  border: 20px dashed rgb(22, 31, 41);
+  width: 80%;
+}
+.about img {
+  width: 100%;
+  height: auto;
+}
+.about .padding {
+  padding: 0 5rem;
+}
+.about h2 {
+  font-size: 3rem;
+  font-family: "Montserrat";
+  text-transform: capitalize;
+}
+.about h4 {
+  font-family: "Montserrat";
+  font-size: 3rem;
+}
+.about h5 {
+  font-weight: normal;
+}
+.about p {
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 0.9rem; 
+}
+
+.skills h6 {
+  font-weight: normal;
+}
+.skills h4 {
+  font-weight: bold;
+}
+.skills .outline {
+  border: 1.2px solid #ffffff;
+  border-radius: 3px;
+  transition: all 400ms ease;
+}
+.skills .outline:hover {
+  background: #2ecc71;
+  transform: scale(1.1);
+  border: none;
+}
+.skills .outline1 {
+  border: 1.2px solid rgb(20, 25, 34);
+  border-radius: 3px;
+  transition: all 400ms ease;
+}
+.skills .outline1:hover {
+  color: white;
+  background: rgb(20, 25, 34);
+  transform: scale(1.1);
+  border: none;
+}
+
+.about, .experience, .skills ,.accomplishment, .educations, .contact {
+  position: relative;
+}
+.accomplishment .carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.accomplishment h4 {
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+.accomplishment p {
+  font-size: 0.8rem;
+  text-align: justify;
+}
+.accomplishment a {
+  width: 40px;
+}
+.accomplishment i.fas {
+  font-size: 2rem;
+}
+.educations h5 {
+  font-weight: 600;
+}
+.educations h6 {
+  font-weight: normal;
+}
+.educations p {
+  font-size: 0.8rem;
+}
+
+.myWork .thumbnails {
+  width: 100%;
+  padding: 0;
+  border: 3px dashed #f1c40f;
+  border-radius: 3px;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 400ms ease;
+}
+.myWork .thumbnails:hover {
+  transform: scale(0.95);
+}
+.myWork img {
+  width: 100%;
+  height: 220px;
+}
+.myWork .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #121020;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-family: cursive;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 0.5rem;
+  width: 60%;
+  font-size: 0.8rem;
+}
+.myWork .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5 ease;
+  background-color: #f1c40fc9;
+  padding: 0;
+  margin: 0;
+}
+.myWork .thumbnails:hover .overlay {
+  opacity: 1;
+  transition: 0.5s;
+}
+/* //////////////////////////// */
+.about, .experience, .skills, .accomplishment, .educations, .myWork, .contact {
+  padding-bottom: 4rem;
+}
+.contact .btn {
+  width: 329px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.contact p {
+  font-size: 0.7rem;
+}
+/* footer */
+.footer {
+  text-align: center;
+  color: rgb(35, 33, 56);
+  width: 100%;
+  height: 150px;
+  background-color: rgb(20, 25, 34);
+}
+
+.footer ul {
+  list-style: none;
+}
+.footer ul li {
+  display: inline-block;
+}
+.footer i {
+  color: white;
+  width: 40px;
+  padding: 0.5rem 0.8rem;
+  /* border: 2px solid white; */
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px;
+
+}
+.footer i:hover {
+  background-color: white;
+  transition: 0.5s;
+  color: #282C34;
+}
+
+@media (max-width: 375px) {
+  .box-content {
+    width: 100%;
+    margin: 0;
+  }
+  .sec1 h1, .sec2 h1 { 
+    font-size: 2.2rem; 
+    text-align: left;
+  }
+  .about h4 {
+    padding-top: 3rem;
+    font-size: 2.2rem;
+  }
+
+  .about .photo {
+    width: 100%;
+    padding: 0;
+  }
+  .about img {
+    width: 100%;
+  }
+  .about .padding {
+    padding: 0 1rem;
+  }
+
+  .skill-content h6 { font-size: 0.9rem; }
+
+  .skill-content h4{ 
+    font-size: 1.2rem;
+  }
+
+}

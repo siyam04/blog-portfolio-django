@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block title %}Details{% endblock %}
+
+{% block content %}
+
+    <div class="post gradient pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 mb-3">
+                    <!-- postDetails -->
+                    <div class="postDetails bg-white pb-5 px-3">
+
+                        {#------------------Message Displaying Block Ends----------#}
+                        {% include 'posts/messages_display.html' %}
+                        {#------------------Message Displaying Block Ends----------#}
+                        
+                        <div class="postDetails-header">
+                            <h1 class="display-6">{{ instance.title }}</h1>
+
+                            <p><b>{{ instance.category }}</b></p>
+                        </div><hr>
+                        <div class="postDetails-body">
+                              {% if instance.image %}
+                                <img src="{{ instance.image.url }}" alt="" width="100%" height="380px">
+                              {% endif %}
+                        </div>
+                        <div class="postDetails-text">
+                            <p class="lead text-justify">{{ instance.content|linebreaks}}</p>
+
+
+                            <p class="text-success">{{ instance.user.profile_name }}</p>
+                        </div>
+
+                        {% if request.user.username == instance.user.user.username %}
+                            <div class="row update_edit">
+                                <div class="col-sx-12 col-md-6">
+                                    <a class="btn btn-dark btn-block" href="{% url 'update' instance.id %}" type="button">Edit</a>
+                                </div>
+                                <div class="col-sx-12 col-md-6">
+                                    <form style="width: 100%;">
+                                        <a class="btn btn-dark btn-block text-white" href="{% url 'delete' instance.id %}" type="button">Delete</a>
+                                    </form>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                    </div>
+                    <!-- postDetails -->
+
+                    <!-- comments -->
+                    <div class="comments-container mt-4 p-3">
+                        <h2 class="display-6">Comments</h2> <hr>
+
+                        <form method="POST" action="">
+                            {% csrf_token %}
+                            {{ comment_form.as_p }}
+                            <input type='submit' value='Post comment' class='btn btn-dark mb-4'>
+                        </form>
+
+
+                        <ul id="comments-list" class="comments-list p-0">
+                        {% for comment in comments %}
+                            <li>
+                                <div class="comment-main-level">
+                                    <!-- Avatar -->
+                                    <div class="comment-avatar"><img src="images/t1.jpg" alt=""></div>
+                                    <!-- Contenedor del Comentario -->
+                                    <div class="comment-box mb-3">
+                                        <div class="comment-head">
+                                            <h6 class="comment-name by-author"><a href="">{{ comment.name }}</a></h6>
+                                        </div>
+                                        <div class="comment-content">
+                                            <p>{{ comment.leave_a_message }}</p>
+                                            <button data-toggle="collapse" data-target="#reply">Relpy</button>
+                                            <button class="px-2">Edit</button>
+                                            <button class="text-danger"><a href="{% url 'comment_delete' comment.id instance.id %}">Delete</a></button>
+
+                                            <span class="arrow" data-toggle="collapse" data-target="#hide"><i class="fa fa-angle-down right"></i></span>
+                                        </div>
+
+                                        <form class="collapse bg-white p-3" id="reply"  method="POST">
+                                            {% csrf_token %}
+                                            {{ comment_form.as_p }}
+                                            <input type='hidden' name="parent_id" value='{{ comment.id }}' class='btn btn-dark mb-4'>
+                                            <input type="submit" value="Reply" class="btn btn-dark mb-4">
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- Respuestas de los comentarios -->
+
+                                <ul class="comments-list reply-list collapse" id="hide">
+                                    {% for child_comment in comment.children %}
+                                        <li>
+                                            <!-- Avatar -->
+                                            <div class="comment-avatar"><img src="images/t2.jpg" alt=""></div>
+                                            <!-- Contenedor del Comentario -->
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="">{{ child_comment.name }}</a></h6>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <p>{{ child_comment.leave_a_message }}</p>
+                                                    <button>Relpy</button>
+                                                    <button class="px-2">Edit</button>
+                                                    <button class="text-danger"><a href="{% url 'comment_delete' child_comment.id instance.id %}">Delete</a></button>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- comments -->
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                    <div class="about bg-dark">
+                        <div class="about-header">
+                            <h1 class="display-6 text-center text-warning pt-3">Articles</h1>
+                        </div><hr>
+                        <div class="article-list">
+                            <ul class="list-group mb-4 ">
+                                {% for post in posts %}
+                                    <li><a href="{% url 'details' post.id %}">{{post.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- about you -->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

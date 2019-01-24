@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.left { float: left; }
+.right { float: right; }
+.lightgreen { background-color: #53d397; }
+.gradient { background: radial-gradient(circle at 100% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);  }
+
+.facebook { background-color: #4267B2; }
+.linkedin { background-color: #0073B2; }
+.twitter { background-color: #1DA1F2; }
+.instagram { background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF); }
+
+
+/* Showcase */
+.showcase{
+	width: 100%;
+	height: 580px;
+	background: url('/static/images/image6.jpeg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+    text-align: center;
+}
+
+.showcase-content a, .showcase-content a:hover {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    border-bottom: 5px solid #53d397;
+}
+
+.showcase-content h1 {
+    font-family: 'Monoton';
+    color: white;
+}
+
+.navbar ul {
+    text-align: center;
+    list-style: none;
+}
+
+a.navbar-brand {
+    font-family: 'Quicksand';
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.main-content h1 {
+    font-family: 'Quicksand';
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.article-header h2 {
+    font-family: 'Quicksand';
+    font-weight: 900;
+    color: #343A40;
+}
+
+.article-header h2:hover {
+    color: #294db1;
+}
+
+.listStyle {
+    list-style: none;
+}
+
+.main-content .article a {
+    text-decoration: none;
+}
+.main-content .article p {
+    font-size: 1rem;
+}
+
+/*.main-content .article-header a {*/
+    /*font-size: 0.8rem;*/
+/*}*/
+.card img {
+    width: 100%;
+}
+
+.article h2 {
+    font-size: 1.6rem;
+}
+
+
+/* SignIn/SignUp */
+
+.loginForm {
+    width: 100%;
+    height: 100%;
+
+}
+
+.loginForm .box {
+    width: 700px;
+    height: 500px;
+    background-color: coral;
+    margin: 5% auto;
+}
+
+.postDetails h1, .about h1 {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.postDetails .about,  {
+    background-color: #53d397;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.form .input-group .btn {
+    border-radius: 3px 0 0 3px;
+}
+#img-upload{
+    width: 100%;
+}
+
+.newsLetter .btn {
+    border-radius: 0 5px 5px 0;
+}
+
+.footer p, .footer address, .footer a { 
+    font-size: 0.9rem;
+}
+.footer address {
+    line-height: 1.6;
+}
+.footer h3 {
+    font-family: 'Quicksand';
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+
+.developer {
+    background-color: #53d397;
+}
+
+.developer span {
+    font-weight: bold;
+}
+
+.postDetails p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.comments-container {
+    background-color: rgb(231, 231, 231);
+}
+
+.footer .about-us {
+    padding-left: 5rem;
+}
+
+
+/* responsive */
+@media (max-width: 960px) {
+    .postDetails h1, .about h1 {
+        font-size: 2rem;
+    }
+    .postDetails .form {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .postDetails img {
+        width: 100%;
+        height: 260px;
+    }
+    .article-list a {
+        font-size: 0.9rem;
+    }
+    .footer h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer, .footer a {
+        text-align: center;
+    }
+    .newsLetter p {
+        font-size: 0.8rem
+    }
+    .footer .input-group {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .developer p {
+        font-size: 1rem;
+    }    .postDetails h1, .about h1 {
+        font-size: 1.5rem;
+    }
+    .footer .about-us {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .postDetails img {
+        width: 100%;
+        height: 200px;;
+    }
+    .footer .input-group {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .developer p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    .postDetails h1, .about h1 {
+        font-size: 1.3rem;
+    }
+    .showcase1 {
+        padding-top: 0rem;
+    }
+    .postDetails .showcase1 .preview {
+        height: 50px;
+    }
+}
+
+@media (max-width: 325px) {
+    .postDetails img {
+        width: 100%;
+        height: 160px;
+        font-size: 1.1rem;
+    }
+    .postDetails p {
+        font-size: 0.9rem;
+    }
+}
+
+/* responsive */

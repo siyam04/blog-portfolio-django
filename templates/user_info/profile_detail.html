@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+<div class="post gradient pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                    <!-- postDetails -->
+                    <div class="postDetails bg-white pb-4 mb-3">
+                        <h1 class="display-6 text-center pt-3">Profile</h1> <hr>
+                        <div class="box  px-3 pt-0">
+                            <div class="showcase1">
+                                <div class="preview img-wrapper">
+                                    {% if profile.profile_image %}
+                                        <img src="{{ profile.profile_image.url }}" alt="profile_pic" width="180px" height="180px">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <form class="form pt-3 pb-4">
+                                <table>
+                                    <tr>
+                                        <th><label for="">Name*</label></th>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="">{{profile.profile_name}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">Email*</label></th>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="">{{profile.email}}</label></td></tr>
+                                    <tr>
+                                        <th><label for="">Address*</label></th>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="">{{profile.address}}</label></td>
+                                    </tr>
+                                </table>
+                                {% if request.user.username == profile.user.username %}
+                                    <a class="btn btn-dark mt-4" href="{% url 'profile-edit' %}">Edit</a>
+                                {% endif %}
+                            </form>
+                        </div>
+                    </div>
+                    <!-- postDetails -->
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <!-- article list -->
+                    <div class="about bg-dark">
+                        <div class="about-header">
+                            <h1 class="display-6 text-center text-warning pt-3">Articles</h1>
+                        </div><hr>
+                        <div class="article-list">
+                            <ul class="list-group text-left mb-4">
+                                {% for post in posts %}
+                                     <li><a href="{% url 'details' post.id %}">{{post.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- article list -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+

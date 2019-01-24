@@ -1,0 +1,74 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}Create Profile{% endblock %}
+
+{% block content %}
+<div class="post gradient pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                    <!-- postDetails -->
+                    <div class="postDetails bg-white pb-4 mb-3">
+                        <h1 class="display-6 text-center pt-3">Edit Profile</h1> <hr>
+                        <div class="box  px-3 pt-0">
+
+
+                            <form class="form pt-3" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="showcase1">
+                                    <div class="preview img-wrapper"></div>
+
+                                    <div class="file-upload-wrapper">
+
+                                        {{form.profile_image}}
+    {#                                    <input type="file" name="file" class="file-upload-native" accept="image/*" />#}
+    {#                                    <input type="text" disabled placeholder="upload image" class="file-upload-text" />#}
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Name*</label>
+                                    {{form.profile_name}}
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Email*</label>
+                                    {{form.email}}
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Address*</label>
+                                    {{form.address}}
+                                </div>
+
+                                <button type="submit" class="btn btn-dark my-2">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- postDetails -->
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <!-- article list -->
+                    <div class="about bg-dark">
+                        <div class="about-header">
+                            <h1 class="display-6 text-center text-warning pt-3">Articles</h1>
+                        </div><hr>
+                        <div class="article-list">
+                            <ul class="list-group mb-4">
+                                {% for post in posts %}
+                                    <li><a href="{% url 'details' post.id %}" class="nav-link">{{post.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- article list -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+form.search {
+  width: 60%;
+  margin: auto;
+}
+
+.search input {
+  width: 400px;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  outline: none;
+  color: #9DBFAF;
+  text-align: center;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 55px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  display: block;
+}

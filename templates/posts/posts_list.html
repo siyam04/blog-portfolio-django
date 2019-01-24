@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}All Articles{% endblock %}
+
+{% block content %}
+    <div class="post gradient pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-12 mb-3">
+                    <div class="about bg-dark text-center">
+                        <div class="about-header">
+                            <h1 class="display-6 text-warning pt-3">Articles</h1>
+                        </div><hr>
+                        <div class="article-list px-1">
+                            <ul class="list-group mb-4 ">
+                                {% for posts in all_posts %}
+                                    <li><a href="{% url 'details' posts.id %}" style="font-weight: bold">{{ posts.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

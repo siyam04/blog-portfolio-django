@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'font-1';
+    src: url('fonts/Nunito-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'font-1', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.facebook { background-color: #4267B2; }
+.linkedin { background-color: #0073B2; }
+.twitter { background-color: #1DA1F2; }
+.instagram { background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF); }
+
+.lightBlue { background-color: rgb(230, 249, 255); }
+.bgc { background-color: #f6fdff; }
+.lightOrange { background-color: #F28C20; }
+.floatNone { float: none; }
+.listNone { list-style: none; }
+/* /////////////////////////// */
+
+.sub-wrapper .showcase {
+    background-image: url(/static/images/image1.jpg);
+    width: 100%;
+    height: 400px;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    color: rgb(35, 33, 56);
+    width: 100%;
+    height: 150px;
+    background-color: #343A40;
+}
+
+.footer ul {
+    list-style: none;
+}
+.footer ul li {
+    display: inline-block;
+}
+.footer i {
+    color: white;
+    width: 40px;
+    padding: 0.5rem 0.8rem;
+    /* border: 2px solid white; */
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+
+}
+.footer i:hover {
+    background-color: white;
+    transition: 0.5s;
+    color: #282C34;
+}

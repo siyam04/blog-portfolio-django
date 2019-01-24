@@ -1,0 +1,175 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'css/styleUpdate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/comment.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profileUpdate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/searchBar.css' %}">
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/DC_logo.png' %}">
+
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top bg-dark text-dark py-3" style="background: transparent">
+        <div class="container-fluid">
+            <a href="{% url 'home' %}" class="navbar-brand text-capitalize"><span style="color: orangered">D</span>evs<span style="color: orangered">C</span>ave</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item active"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'siyam' %}" class="nav-link text-warning" target="_blank"><b>Portfolio</b></a></li>
+                    <li class="nav-item"><a href="{% url 'categories' %}" class="nav-link">Categories</a></li>
+                    <li class="nav-item"><a href="{% url 'all-authors' %}" class="nav-link">Authors</a></li>
+
+                    {% if request.user.is_authenticated %}
+                        <li class="nav-item"><a href="{% url 'create' %}" class="nav-link">Publish Now !</a></li>
+                        <li class="nav-item"><a href="{% url 'profile' %}" class="nav-link"><b style="color: white">{{ request.user }}</b></a></li>
+                        <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link text-warning">Sign Out</a></li>
+                    {% else %}
+                        <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link text-warning">Sign In/Sign Up</a></li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- footer -->
+    <div class="footer bg-dark">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-xs-12 col-md-3 pb-5">
+                    <div class="powered-by">
+                        <h3 class="display-6 text-white text-uppercase">Powered By</h3>
+                        <hr>
+                        <ul class="list-group listStyle text-left">
+                            <li><a href="https://www.djangoproject.com" class="nav-link text-white pl-0 pt-0 text-warning">Python | Django | SQLite3</a></li>
+                            <li><a href="https://getbootstrap.com/docs/3.3/javascript/" class="nav-link text-white pl-0 text-warning">JavaScript | Bootstrap</a></li>
+                            <li><a href="https://www.w3schools.com/html/html_css.asp" class="nav-link text-white pl-0 text-warning">HTML | CSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-5 pb-5">
+                    <form class="newsLetter" method="post" action="{% url 'subscribe' %}">
+                        {% csrf_token %}
+                        <h3 class="display-6 text-white text-uppercase">Newsletter</h3> <hr>
+                        <p class="text-white">You can trust us. we only send promo offers, not a single spam.</p>
+{#                        {% if message.success %}#}
+{#                            #}
+{#                        {% endif %}#}
+{#                        {% include 'posts/messages_display.html' %}#}
+                        <div class="input-group">
+                            <input name="email" type="text" class="form-control" placeholder="Email...">
+                            <button class="btn btn-warning">Subscribe</button>
+{#                          <a class="btn btn-warning" href="{% url 'subscribe' %}" type="button">Subscribe</a>#}
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-md-4 about-us pb-5">
+                    <div class="contact" id="contact">
+                        <h3 class="display-6 text-white text-uppercase">About Us</h3> <hr>
+                        <address href="https://www.facebook.com/groups/524989517960740/" class="text-white">
+                            Team <span class="text-warning">DevsCave</span><br>
+                            Dhaka, 1207<br>
+                        </address>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://goo.gl/uZ8fm5" target="_blank"><i class="fab fa-facebook-f facebook"></i></a></li>
+                        <li><a href="https://bitbucket.org/team_devscave"><i class="fab fa-bitbucket twitter"></i></a></li>
+                        <li><a href="https://github.com/siyam04/shohoz_tech-university-django"><i class="fab fa-github bg-gray"></i></a></li>
+{#                        <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in linkedin"></i></a></li>#}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="developer text-center">
+        <p class="py-2 m-0 text-dark">Copyright ©2018 all rights reserved |<span style="color: orangered;"> DevsCave </span> </p>
+    </div>
+    <!-- footer -->
+
+    <!-- <script src="script/animation.js"></script> -->
+
+    <!-- scrolling -->
+    <script>
+        $(function() {
+            // Smooth Scrolling
+            $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+                }
+            }
+            });
+        });
+    </script>
+    <!-- scrolling -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+<!-- social link -->
+<style>
+    .social {
+        list-style: none;
+    }
+    .social li {
+        display: inline-block;
+        text-align: center;
+    }
+    .social .fab {
+        color: white;
+        width: 40px;
+        padding: 0.5rem 0.8rem;
+        text-decoration: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 25px;
+    }
+    .social .fab:hover {
+        background-color: white;
+        color: #282C34;
+        transition: 0.3s;
+    }
+
+    .facebook { background-color: #4267B2; }
+    .linkedin { background-color: #0073B2; }
+    .twitter { background-color: #1DA1F2; }
+    .instagram { background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF); }
+
+</style>
+<!-- social link -->
+</html>

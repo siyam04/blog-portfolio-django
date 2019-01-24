@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Quicksand');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.loginBox {
+    width: 380px;
+    padding: 2rem;
+    margin-top: 0;
+    background-color: white;
+    margin: 2% auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
+  
+#signin-button,
+#signup-button {
+    cursor: pointer;
+    width: 100%;
+    color: rgb(55, 61, 71);
+    background-color: white;
+    border: none;
+    padding: 0.8rem;
+    outline: none;
+    font-family: 'Quicksand';
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+label, input {
+    font-family: 'Quicksand';
+    border-radius: 0;
+    padding: 0.2rem 0;
+}
+
+input {
+    font-size: 0.8rem;
+}
+
+  
+#signin-form,
+#signup-form{
+  display: none;
+}
+
+input::placeholder {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-family: 'Quicksand';
+}
+  
+#signin-button {
+    margin: 0 auto;
+}
+
+form {
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+}
+
+@media (max-width: 375px) {
+    .loginBox {
+        width: 320px;;
+        margin-top: 20%;
+    }
+    #signin-button, #signup-button {
+        font-size: 1.3rem;
+    }
+    .loginBox label {
+        font-size: 0.9rem;
+    }
+}

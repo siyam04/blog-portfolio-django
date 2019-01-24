@@ -1,0 +1,305 @@
+
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Sign In or Sign Up</title>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+
+    <!-- loginForm -->
+    <div class="loginBox">
+        <div class="row mb-3">
+            <div class="col">
+                <button id="signin-button">Sign In</button>
+            </div>
+            <div class="col">
+                <button id="signup-button">Sign Up</button>
+            </div>
+        </div>
+
+        <div>
+            <form id="signup-form" method="POST" action="{% url 'signup' %}">
+                {% csrf_token %}
+                <div class="form-group mt-4">
+                    <label class="text-dark">Firstname:</label>
+                    <input name="firstname" class="form-control" type="text" placeholder="enter firstname">
+                </div>
+
+                <div class="form-group mt-4">
+                    <label class="text-dark">Lastname:</label>
+                    <input name="lastname" class="form-control" type="text" placeholder="enter lastname">
+                </div>
+
+                 <div class="form-group mt-4">
+                    <label class="text-dark">Email:</label>
+                    <input name="email" class="form-control" type="email" placeholder="enter email">
+                </div>
+
+                <div class="form-group mt-4">
+                    <label class="text-dark">Username:</label>
+                    <input name="username" class="form-control" type="text" placeholder="enter username">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Password:</label>
+                    <input name="password" class="form-control" type="password" placeholder="password">
+                </div>
+
+                <div class="form-group pb-3">
+                    <label for="">Confirm Password:</label>
+                    <input name="repassword" class="form-control" type="password" placeholder="Confirm password">
+                </div>
+
+                <button class="btn btn-dark" type="submit">Sign Up</button>
+            </form>
+
+            <form id="signin-form" method="POST" action="{% url 'signin' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="">Username:</label>
+                    <input name="username" class="form-control" type="text" placeholder="username">
+                </div>
+
+                <div class="form-group pb-3">
+                    <label for="">Password:</label>
+                    <input name="password" class="form-control" type="password" placeholder="password">
+                </div>
+
+                <button class="btn btn-dark" type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Javascript -->
+    <script>
+        init();
+
+        function init() {
+            $("#signin-button").css("border-bottom", "3px solid black");
+            $("#signin-form").css("display", "block");
+            }
+
+            $("#signin-button").on("click", function() {
+            $(this).css("border-bottom", "3px solid black");
+            $("#signup-button").css("border-bottom", "3px solid white");
+
+            $("#signup-form").css("display", "none")
+                $("#signin-form").slideDown(400, function() {
+                $(this).css("display", "block");
+            });
+            });
+
+            $("#signup-button").on("click", function() {
+            $(this).css("border-bottom", "3px solid black");
+            $("#signin-button").css("border-bottom", "3px solid white");
+
+            $("#signin-form").css("display", "none");
+            $("#signup-form").slideDown(400, function() {
+                $(this).css("display", "block");
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{##}
+{##}
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block title %}Sign Up{% endblock %}#}
+{##}
+{#{% block script_source %}#}
+{#    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>#}
+{#{% endblock script_source %}#}
+{##}
+{#{% block style %}#}
+{#        <style>#}
+{#        .lightblue { background-color: lightblue; }#}
+{#        .lightgrey { background-color: #dddddd; }#}
+{##}
+{#        .btn-file {#}
+{#            position: relative;#}
+{#            overflow: hidden;#}
+{#        }#}
+{#        .btn-file input[type=file] {#}
+{#            position: absolute;#}
+{#            top: 0;#}
+{#            right: 0;#}
+{#            min-width: 100%;#}
+{#            min-height: 100%;#}
+{#            font-size: 100px;#}
+{#            text-align: right;#}
+{#            filter: alpha(opacity=0);#}
+{#            opacity: 0;#}
+{#            outline: none;#}
+{#            background: white;#}
+{#            cursor: inherit;#}
+{#            display: block;#}
+{#        }#}
+{#        #img-upload{#}
+{#            width: 100%;#}
+{#        }#}
+{#    </style>#}
+{#{% endblock style %}#}
+{##}
+{#{% block content %}#}
+{#-----------------------Sign Up Form Start-----------------------#}
+{#    <div class="container mt-5">#}
+{##}
+{#            <div class="publish-content ">#}
+{##}
+{#              <form action="" method="POST">#}
+{#                {% csrf_token %}#}
+{#                  <div class="row">#}
+{#                      <div class="col-md">#}
+{#                          <div class="form-group">#}
+{#                              <label for="text">First Name</label>#}
+{#                              {{form.first_name}}#}
+{#                          </div>#}
+{#                      </div>#}
+{#                      <div class="col-md">#}
+{#                          <div class="form-group">#}
+{#                              <label for="text">Last Name</label>#}
+{##}
+{#                              {{form.last_name}}#}
+{#                          </div>#}
+{#                      </div>#}
+{#                  </div>#}
+{#                  <div class="form-group">#}
+{#                      <label for="text">Username</label>#}
+{#                      {{form.username}}#}
+{#                  </div>#}
+{#                  <div class="form-group">#}
+{#                      <label for="email">E-mail</label>#}
+{#                      {{form.email}}#}
+{#                  </div>#}
+{#                  <div class="form-group">#}
+{#                      <label for="pwd">Password</label>#}
+{#                      {{form.password1}}#}
+{#                  </div>#}
+{#                  <div class="form-group">#}
+{#                      <label for="pwd">Confirm Password</label>#}
+{#                      {{form.password2}}#}
+{#                  </div>#}
+{#                  <button class="btn btn-primary btn-sm mb-3" type="submit">SIGNUP</button>#}
+{#              </form>#}
+{#            </div>#}
+{#        </div>#}
+{# <script>#}
+{#    $(document).ready( function() {#}
+{#    	$(document).on('change', '.btn-file :file', function() {#}
+{#		var input = $(this),#}
+{#			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');#}
+{#		input.trigger('fileselect', [label]);#}
+{#		});#}
+{#		$('.btn-file :file').on('fileselect', function(event, label) {#}
+{##}
+{#		    var input = $(this).parents('.input-group').find(':text'),#}
+{#		        log = label;#}
+{##}
+{#		    if( input.length ) {#}
+{#		        input.val(log);#}
+{#		    } else {#}
+{#		        if( log ) alert(log);#}
+{#		    }#}
+{#		});#}
+{#		function readURL(input) {#}
+{#		    if (input.files && input.files[0]) {#}
+{#		        var reader = new FileReader();#}
+{#		        reader.onload = function (e) {#}
+{#		            $('#img-upload').attr('src', e.target.result);#}
+{#		        }#}
+{#		        reader.readAsDataURL(input.files[0]);#}
+{#		    }#}
+{#		}#}
+{#		$("#imgInp").change(function(){#}
+{#		    readURL(this);#}
+{#		});#}
+{#	});#}
+{#</script>#}
+{#-----------------------Sign Up Form End-----------------------#}
+{#{% endblock content %}#}
+{##}
+{##}
+
+
+
+
+
+
+
+{#------------------Footer Start--------------------------#}
+{#        <div class="footer bg-dark mt-4">#}
+{#            <div class="container">#}
+{#                <div class="row">#}
+{#                    <div class="col">#}
+{#                        <h5>Powered By</h5>#}
+{##}
+{#                        <ul class="list-group mt-3">#}
+{#                            <li><a href="#">Python</a></li>#}
+{#                            <li><a href="#">Django</a></li>#}
+{#                            <li><a href="#">SQLite 3</a></li>#}
+{#                            <li><a href="#">Bootstrap</a></li>#}
+{#                            <li><a href="#">HTML5 CSS3</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col">#}
+{#                        <h5>Newsletter</h5>#}
+{#                        <p class="mt-3">You can trust us. We only send promo offers, not a single spam</p>#}
+{##}
+{#                        <div class="input-group">#}
+{#                            <input type="text" placeholder="email" id="inputText" class="form-control">#}
+{##}
+{#                            <button class="subscribeBtn btn-warning" id="subscribeBtn">SUBSCRIBE</button>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <p class="footerBottom mt-4">Copyright ©2018 All rights reserved | Developed by <span><a href="http://bit.ly/2zG5byg" target="_blank">Md. Abdullah Al Galib (Siyam)</a> </span></p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div> <!--  wrapper -->#}
+{#------------------Footer End-----------------------#}
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+{#    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>#}
+{##}
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>#}
+{#</body>#}
+{#</html>#}
+

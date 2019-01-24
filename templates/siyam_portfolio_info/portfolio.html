@@ -1,0 +1,1089 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'portfolio/portfolio1.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'portfolio/stylePortfolio.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'portfolio/mainPortfolio.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        #ahsan-button {
+            cursor: pointer;
+            width: 100%;
+            color: rgb(55, 61, 71);
+            background-color: white;
+            border: none;
+            padding: 0.8rem;
+            outline: none;
+            font-family: 'Quicksand';
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        #ahsan-form {
+            display: none;
+        }
+
+        .gradient1 { background: linear-gradient(30deg,  #799F0C, #FFE000); }
+        .gradient2 { background: linear-gradient(30deg,  #C6FFDD, #FBD786, #f7797d); }
+        .gradient3 { background: linear-gradient(30deg, rgba(233,240,104,1) 0%, rgba(70,252,146,1) 100%); }
+
+        .instagram { background: radial-gradient(circle at 0% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF); }
+
+        .lightBlue { background-color: rgb(230, 249, 255); }
+    </style>
+
+</head>
+<body class="bg-dark">
+
+    <div class="wrapper">
+        <!-- loginForm -->
+        <div class="box-content">
+            <div class="container-fluid p-0">
+                <div class="row mb-3">
+                    <div class="col-xs-12 col-md-4">
+                        <button id="siyam-button">Abdullah Al Galib (Siyam)</button>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <button id="joy-button">S. Rahman</button>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <button id="ahsan-button">Ahsan Habib</button>
+                    </div>
+                </div>
+            </div>
+
+<!--------------------------------------------------------Siyam Start----------------------------------------------------------->
+            <div class="container-fluid p-0">
+                <form id="siyam-form">
+                    <section class="showcase">
+                        <div class="container">
+                            <div class="content-heading">
+                                <h1 class="text-capitalize">I am
+                                <span class="siyam" style="color: #2ecc71"></span>
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="skewed-top"></div>
+                    </section>
+
+                    <!----About Me Section---->
+                    <section class="sec1 about">
+                        <div class="container text-white mt-5">
+                            <div class="row pt-4">
+                                <div class="col-xs-12 col-md-7 pt-0 padding">
+                                    <div class="photo"><img src="/static/images/Siyam Pro.jpg" class="img" alt="siyam"></div>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <div class="">
+                                        <h4 style="color: #2ecc71">About Me</h4>
+                                        <p>
+                                            galib.abdullah04@gmail.com<br>linkedin.com/in/abdullah-al-galib<br>github.com/siyam04<br>
+                                            facebook.com/siyam.algalib<br>youtube.com/protidininfo<br>01737 202004 <hr>
+                                        </p>
+                                        <h5 class="display-6" style="color: orangered">Python (Django) Developer | Team Leader | Presenter | Tech Enthusiast</h5>
+                                        <p class="pt-4">A person who thinks outside the box and likes to communicate with people. I want to build my career as a <span style="color: #2ecc71">Software Engineer</span>.
+
+                                        <br><br>
+
+                                        Now I'm working on Python's <span style="color: #2ecc71">Django web framework</span>. This 'Blog & Portfolio' site is an <span style="color: #2ecc71">Open Source</span> project and <span style="color: #2ecc71">BackEnd</span> is develop with <span style="color: #2ecc71">Django</span>. We have a small <span style="color: #2ecc71">Team</span> of three people named <span style="color: #2ecc71">DevsCave</span>. <span style="color: #2ecc71">I'm</span> Team Leader and Django developer, <span style="color: #2ecc71">Sohnur Rahman</span> is front-end designer and developer, <span style="color: #2ecc71">Ahsan Habib</span> is also a Django developer.
+
+                                        <br><br>
+
+                                        I did the <span style="color: #2ecc71">Main Planning</span> and <span style="color: #2ecc71">Backend Structure</span> of this <span style="color: #2ecc71">Project</span>. Then Sohan completed the <span style="color: #2ecc71">Frontend</span>, and Ahsan Habib <span style="color: #2ecc71">Updated</span> the whole <span style="color: #2ecc71">Project</span>. The project is finished in a <span style="color: #2ecc71">Splendid Teamwork</span>. But there are still plenty of work left and we are <span style="color: #2ecc71">Trying</span> to do it slowly through <span style="color: #2ecc71">Learning</span>. Our <span style="color: #2ecc71">Team</span> usually works like this. We are <span style="color: #2ecc71">Interested</span> in further projects in the <span style="color: #2ecc71">Future</span>.
+                                        </p>
+                        
+                                        <a href="{% static 'portfolio/resume/CV-Abdullah Al Galib.pdf' %}" class="btn btn-outline-success text-center mt-4 mb-4" style="width: 100%" download>Download CV</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!----About Me Section END---->
+
+                    <!----Experience Section---->
+                    <section class="sec2 experience">
+                        <div class="skewed-top"></div>
+                        <div class="container">
+                            <h1>Experiences</h1>
+
+                            <div class="experience-content">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <h5>Khidmah IT</h5>
+                                        <p>Sep 2017 - Dec 2018<br>
+                                        Dhaka, Bangladesh</p>
+
+                                        <h6>Python-Django Developer (Trainee)</h6>
+                                        <p>We have developed a Django powered, open source web-based software which will launch soon. The official name of this project will be 'SHANIRVOR BANGLADESH (স্বনির্ভর বাংলাদেশ)'. It's a local freelancing platform application and in the testing stage now. Also, our team is working to develop some other software as well.
+                                            <br><br><b>Key Responsibilities:</b><br>- Coding.<br>- Teamwork.<br>- Completing tasks.<br>- Version controlling.<br>- Agile methodologies.</p>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <h5>Khidmah IT</h5>
+                                        <p>Jul 2018 - Dec 2018<br>
+                                        Dhaka, Bangladesh</p>
+
+                                        <h6>Marketing Communications (Trainee)</h6>
+                                        <p>Khidmah IT is a startup IT training center and working to develop some software.
+                                            <br><br><b>Key Responsibilities:</b><br>- Branding.<br>- Team leading.<br>- Client dealings.<br>- Decision making.<br>- Digital marketing.<br>- Business meetings.<br>- Marketing strategy.</p>
+                                    </div>
+                                    
+                                    <!-- <div class="col-xs-12 col-md-6">    insert more experience inside this div    </div> -->
+                                </div>
+                            </div>
+                            <hr>
+                            <hr>
+                            <div class="experience-content">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <h5>Protidin Info - প্রতিদিন ইনফো</h5>
+                                        <p>Jul 2016 - Present (On Going)<br>
+                                        Dhaka, Bangladesh</p>
+
+                                        <h6>Presenter (Part-time)</h6>
+                                        <p>Protodin Info is a technology-related news based platform. Our work area is an explanation of innovative technologies, basic functionalities & promoting the IT products.
+                                            <br><br><b>Key Responsibilities:</b><br>- Teamwork.<br>- Presentation.<br>- Digital & social marketing.<br>- Public & Business Connections.</p>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <h5>Microsoft</h5>
+                                        <p>Aug 2013 - Oct 2014 (1 year and 3 months)<br>
+                                        Bogura, Bangladesh</p>
+
+                                        <h6>Promoter (Full-time)</h6>
+                                        <p>Under the operation of Market Express Ltd. .
+                                            <br><br><b>Key Responsibilities:</b><br>- Teamwork.<br>- Products study.<br>- Achieving targets.<br>- Sales & marketing.<br>- Customer support.<br>- Reporting to the superior.<br>- Promoting products (Smartphone).</p>
+                                    </div>
+
+                                    <!-- <div class="col-xs-12 col-md-6">    insert more experience inside this div    </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <!----Experience Section End---->
+
+                    <!----My Works Image Section---->
+                    <section class="sec1 myWork text-white text-center">
+                        <div class="container">
+                            <h1 class="text-center pb-4">Projects & Activities</h1>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+                                    <a href="https://bit.ly/2A2BW7R" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="/static/images/blog.png" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">Blog & Portfolio</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://bit.ly/2DYk2Xd" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="/static/images/food.png" alt="" width="100%">
+                                        <div class="overlay">
+                                            <div class="content">Distributive Food Services</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://github.com/siyam04/TicTacToe-game-javascript" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="{% static 'images/tictactoe.png' %}" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">TicTacToe</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://github.com/siyam04/leap_year-temp-converter-university-GUI-java" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="{% static 'images/temp-conver-java-gui.png' %}" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">Temperature & Leap Year Converter</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://www.youtube.com/protidininfo" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="{% static 'images/e8.png' %}" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">Bangabandhu Satellite (YouTube Video)</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://github.com/siyam04/user-interface-designs-sample" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="{% static 'images/dell.png' %}" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">User Interface Design (PSD templates)</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!---- My Works Image Section END ---->
+
+                    <!---- My Skills ---->
+                    <section class="sec1 skills text-white pb-5">
+                        <div class="container">
+                            <h1>Skills</h1>
+
+                            <div class="skill-content">
+                                <h4>Industry Knowledge</h4> <hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Software Development</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Web Applications</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Agile Methodologies</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">User Experience</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">User Interface</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Digital Marketing</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Event Planning</h6></div>
+                                </div><br>
+
+                                <h4>Tools & Technologies</h4> <hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Python</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Django</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">SQL</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Git</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">JavaScript (Basic)</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">jQuery (Basic, DOM)</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">C (Basic)</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Java (Basic, GUI)</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">HTML5</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">CSS</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Bootstrap</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Docker</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Linux</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Windows</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Microsoft Office</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Adobe Photoshop</h6></div>
+                                </div><br>
+
+                                <h4>Interpersonal Skills</h4> <hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Management</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Teamwork</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Leadership</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Presentation</h6></div>
+                                </div><br>
+
+                                <h4>Other Skills</h4> <hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Tour Planning</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Heroku</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2"></h6>Virtual Environment</div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Trello</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline p-2">Web Scraping</h6></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!---- My Skills END ---->
+
+                    <!---- Accomplishment ---->
+                    <section class="sec2 accomplishment">
+                        <div class="container">
+                            <div class="skewed-top"></div>
+                            <h1>Accomplishments</h1>
+
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="container p-0">
+                                            <h4>Certifications</h4> <hr>
+
+                                            <h6>Certificate of Completion (Digital Marketing Workshop held at Creative IT Institute, Dhaka)</h6>
+                                            <p>Nov 2018 – Present</p>
+                                            <p><a href="https://drive.google.com/file/d/1zx71yYrdkTMNSVHmym8kItaGq2ls9ZKC/view" target="_blank" style="color: orangered">
+                                                <b>See Certificate</b>
+                                            </a></p>
+                                            <hr>
+
+                                            <h6>Course Completion Certificate (Python Workshop held at Trainer BD, Dhaka)</h6>
+                                            <p>Jul 2018 – Jul 2018</p>
+                                            <p><a href="https://drive.google.com/file/d/1uwAtbWAomwizsHWlQgaexALCZYrDi9m-/view" target="_blank" style="color: orangered">
+                                                <b>See Certificate</b>
+                                            </a></p>
+                                            <hr>
+
+                                            <h6>Diploma in Graphic Design (National Youth Training Center, Dhaka)</h6>
+                                            <p>Jul 2012 – Dec 2012</p>
+                                            <p><a href="https://drive.google.com/file/d/1gmT31-hqyg2QPI3JJj_WzCWtTDSzvr12/view" target="_blank" style="color: orangered">
+                                                <b>See Certificate</b>
+                                            </a></p>
+                                            <hr>
+
+                                            <h6>Computer Hardware & Troubleshooting (Computer Solution & Training Center, Dhaka)</h6>
+                                            <p>Jan 2012 – Jun 2012</p>
+                                            <p><a href="https://drive.google.com/file/d/1nYCARTQUzQFnASkN15V7pp4OFvKdvfir/view" target="_blank" style="color: orangered">
+                                                <b>See Certificate</b>
+                                            </a></p>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container p-0">
+                                            <h4>Courses</h4> <hr>
+
+                                            <h6>Computer Hardware and Troubleshooting (5 months, from Computer Solution & Training Center, Dhaka)</h6>
+                                            <hr>
+                                            <h6>Diploma in Graphic Design (6th months, from National Youth & Training Center, Dhaka)</h6>
+                                            <hr>
+                                            <h6>Python OOP and Django Web Framework (4 months, from Khidmah IT, Dhaka)</h6>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container p-0">
+                                            <h4>Projects</h4> <hr>
+
+                                            <h6>Food Service Framework (C2C, Distributive System, Blockchain, Python-Django, Android)</h6>
+                                            <p>Nov 2018 – Present</p>
+                                            <p><b>
+                                                A Django powered open source C2C web application for ordering homemade food cooked by housewives.
+                                                This system will be based on the smartphone app and we will apply blockchain in the future.
+                                                It'll also follow a distributive system like Uber. We just developed the web version for a demo.
+                                                This project was funded by Prof. Dr. A S M Touhidul Hasan. This application will be very helpful for the students and
+                                                service holders who are living outside from home and don't able to consume homemade food.
+                                                We want to develop a C2C and distributive framework not only for food but also for other services and write a
+                                                research paper based on this project.
+                                            </b></p>
+                                            <p><a href="https://food-service-system.herokuapp.com" style="color: orangered">
+                                                <b>Live App (Free Hosted)</b>
+                                            </a></p>
+                                            <p><a href="https://github.com/siyam04/food-service-system-django" style="color: orangered">
+                                                <b>GitHub</b>
+                                            </a></p>
+                                            <hr>
+
+                                            <h6>Portfolio and Blog Publications Site (Python-Django, JavaScript)</h6>
+                                            <p>Aug 2018 – Present</p>
+                                            <p><b>
+                                                A Django powered open source web application for publishing articles, videos and manages the personal portfolio.
+                                                and in the debugging stage now. This project is maintaining by our team named 'DevsCave'.
+                                                I and my team member's portfolio added to this project.
+                                            </b></p>
+                                            <p><a href="https://blog-and-portfolio.herokuapp.com" style="color: orangered">
+                                                <b>Live App (Free Hosted)</b>
+                                            </a></p>
+                                            <p><a href="https://github.com/siyam04/blog-and-portfolio-django" style="color: orangered">
+                                                <b>GitHub</b>
+                                            </a></p>
+                                            <hr>
+
+                                            <h6>Shanirvor Bangladesh (Python-Django, Django Rest API)</h6>
+                                            <p>Jan 2018 – Present</p>
+                                            <p><b>
+                                                A Django powered, open source web-based software which will launch soon.
+                                                The official name of this project will be 'SHANIRVOR BANGLADESH(স্বনির্ভর বাংলাদেশ)'.
+                                                It's a local freelancing platform application and in the testing stage now.
+                                                This project is under the 'Khidmah IT'.
+                                            </b></p>
+                                            <p><a href="https://github.com/siyam04/shonirvor" style="color: orangered">
+                                                <b>GitHub</b>
+                                            </a></p>
+                                            <hr>
+
+                                            <h6>Other Projects & Contributions</h6>
+                                            <p><b>
+                                                I know how to use C and python as I have solved some online/offline problems using them.
+                                                On top of this, I built a basic application based on Java GUI during my 2nd year of university.
+                                                I also contributed to some other projects that my colleagues and friends have made.
+                                                I want to increase my knowledge by learning more tools and technologies so that I can develop better projects in the future.
+                                            </b></p>
+                                            <p><a href="https://uhunt.onlinejudge.org/id/814283" style="color: orangered">
+                                                <b>UVA Online Judge</b>
+                                            </a></p>
+
+                                            <p><a href="https://drive.google.com/drive/folders/1vztR6fevfpejXHpkenjsywGjum2j9nhQ" style="color: orangered">
+                                                <b>Google Drive</b>
+                                            </a></p>
+                                            <hr>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container p-0">
+                                            <h4>Honor & Award</h4> <hr>
+
+                                            <h6>Inter Department Programming Contest Award</h6>
+                                            <p>Feb 2017 (Organized By: State University Computing Club)</p> <br>
+                                            <p>Achieved a certificate from vice chancellor Prof. Dr. Md. Sayeed Salam and asst. professor Mamoon Al Rasheed sir.</p>
+                                            <p><a href="https://drive.google.com/file/d/1IpGZ77xYzExtxKxtX7x6Gu2GPgxUymjG/view" target="_blank" style="color: orangered">
+                                                <b>See Certificate</b>
+                                            </a></p>
+                                            <hr>
+                                            
+                                            <h4>Languages</h4><hr>
+
+                                            <h6>Bengali, English</h6>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                    <!---- Accomplishment END ---->
+
+                    <!---- Educations ---->
+                    <section class="sec1 educations text-white">
+                        <div class="container">
+                            <h1 class="">Educations</h1>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <h5>State University of Bangladesh</h5> <hr>
+                                    <p>77 Satmasjid Road, Dhanmondi, Dhaka</p>
+                                    <h6>Bachelor of Computer Science & Engineering</h6>
+                                    <p>2015 (Fall) - 2019 (Summer)</p>
+                                    <p>Activities and Societies: Computing Club, Development Club</p>
+                                    <hr>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <h5>Dhaka Polytechnic Institute</h5> <hr>
+                                    <h6>Diploma in Computer Engineering</h6>
+                                    <p>Activities and Societies: Politics</p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <h5>R.B Govt. Boys High School, Joypurhat</h5> <hr>
+                                    <h6>SSC, Science, GPA 5.00</h6>
+                                    <p>Activities and Societies: Sports</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!---- Educations END---->
+
+                    <!---- Contact ---->
+                    <section class="sec2 contact text-center">
+                        <div class="skewed-top"></div>
+                        <div class="container">
+                            <marquee behavior="alternate" width="50%" style="background-color: black; color: orangered">
+                                <b>This section is under construction. Contact information is provided above.</b>
+                            </marquee>
+                            <h1 class="text-center">Contact</h1>
+                            <h6 class="text-center pb-3">GET IN TOUCH </h6>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                <div class="form">
+                                    <input type="text" class="form-control mb-3" placeholder="name">
+                                </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                <div class="form">
+                                    <input type="email" class="form-control mb-3" placeholder="email">
+                                </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                <div class="form">
+                                    <input type="text" class="form-control" placeholder="subject">
+                                </div>
+                                </div>
+                                <div class="col-xs-12 col-md-12 pt-2">
+                                <div class="form">
+                                    <textarea type="text" class="form-control" placeholder="message" rows="4" cols="50"></textarea>
+                                </div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-dark" type="submit">Send Message</button>
+{#                            <h6 class="pt-3 text-center">galib.abdullah04@gmail.com</h6>#}
+{#                            <h6 class="pt-3 text-center">01737 202004</h6>#}
+                        </div>
+                    </section>
+                    <!---- Contact END---->
+
+                    <!---- Footer Follow Me ---->
+                    <section class="footer">
+                        <p class="text-white text-center pt-4 pb-1"> Follow Me </p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/siyam.algalib" target="_blank"><i class="fab fa-facebook-f facebook"></i></a></li>
+                            <li><a href="https://github.com/siyam04" target="_blank"><i class="fab fa-github bg-dark"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/abdullah-al-galib" target="_blank"><i class="fab fa-linkedin-in linkedin"></i></a></li>
+                        </ul> <hr>
+                    </section>
+                    <!---- Footer Follow Me END---->
+<!--------------------------------------------------------Siyam END----------------------------------------------------------->
+
+ <!--------------------------------------------------------Joy Start----------------------------------------------------------->
+                </form>
+
+                <form id="joy-form">
+                    <section class="showcase" style="background-image: url(/static/images/img4.jpeg)">
+                        <div class="container">
+                            <div class="content-heading">
+                                <h1 class="text-capitalize">I am <span class="joy" style="color: #ff7979"></span></h1>
+                            </div>
+                        </div>
+                        <div class="skewed-top"></div>
+                    </section>
+    
+                    <section class="sec1 about">
+                        <div class="container text-white mt-5">
+                        <div class="row pt-4">
+                            <div class="col-xs-12 col-md-7 pt-0 padding">
+                                <div class="photo"><img src="/static/images/img.jpg" class="img" alt="joy"></div>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                <div class="">
+                                    <h4>About Me</h4>
+                                    <h5 class="display-6">Frontend Developer | Graphics Designer</h5> <hr>
+                                    <p class="pt-4">I’m in the midst of retraining myself now. I’m learning to work collaboratively. I am a hard working person with a creative mind and always willing to learn new skills. I am friendly, helpful, polite, have a good sense of humor. I am able to work independently and also within a team. I want to build my career as a “Front-End web developer” and focus on <i class="text-warning">“Full stack web developer”</i> in the future.
+                                    </p>
+                    
+                                    <a href="/static/portfolio/resume/S.Rahman - Frontend.pdf" class="btn btn-outline-warning text-center mt-4 mb-4" style="width: 100%" download>Download CV</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                
+                    <section class="sec2 skills y">
+                        <div class="skewed-top"></div>
+                        <div class="container">
+                            <h1>My skills</h1>
+
+                            <div class="skill-content">
+                                <h4>Industiral Knowledge</h4> <hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Agile Methodologies</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Web Development</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Web Design</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Responsive Web Design</h6></div>
+                                </div><br>
+
+                                <h4>Tools & Technologies</h4> <hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">JavaScript</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">jQuery</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">HTML5</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">CSS3</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">SASS</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Bootstrap</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Git</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Github</h6></div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Adobe Illustrator</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Adobe Photoshop</h6></div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 pb-3"><h6 class="outline1 p-2">Adobe XD</h6></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <section class="sec1 accomplishment text-white">
+                        <div class="container">
+                            <h1 class="">Accomplishments</h1>
+
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="container p-0">
+                                            <h4>Certifications</h4> <hr>
+
+                                            <h6>Course Completion Certificate __Python Workshop__</h6>
+                                            <p>Jul 2018 – Present</p>
+                                            <hr> <br>
+                                            <h6>Intra Departmental Junior Programming Contest</h6>
+                                            <p>Feb 2017</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container p-0">
+                                            <h4>Projects</h4> <hr>
+
+                                            <h6>Food Service (Distributive Architecture, Python-Django, JavaScript)</h6>
+                                            <p>Nov 2018 – Present</p>
+                                            <p>This is an open source web application for ordering homemade food cooked by housewives. Where I am developing “Front-End” section. This system will be based on the smartphone app in the future. It'll be also based on distributive architecture like Uber. We just developed the web version for a demo. It's my personal project maintaining by our team named 'DevsCave'. This application will be very helpful for the students of Dhaka city who are living outside from home and don't able to consume homemade food. </p>
+                                            <hr>
+
+                                            <h6>Blog Publications and Portfolio Management System (Python-Django, JavaScript)</h6>
+                                            <p>Aug 2018 – Present</p>
+                                            <p>I am working on a project that is very important for my learning and software skills. My friend has developed the Back-End while I will design the Front-End section. However, the project isn’t ready for hosting as the name is not final and there are more functionalities that must be added like the 'Comments section', 'API', 'Email subscription', etc. On top of this I need to clean the codes and add my portfolio so the final project will be a web-based blog and video publications application along with my portfolio after testing. Our team name is “DevsCave”</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container p-0">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-md-6">
+                                                    <h4>Honor & Award</h4> <hr>
+        
+                                                    <h6>Intra departmental junior programming contest award</h6>
+                                                    <p>Feb 2017 - State University Computing Club</p>
+                                                </div>
+                                                <div class="col-xs-12 col-md-6">
+                                                    <h4>Language</h4> <hr>
+        
+                                                    <h6>English</h6> <h6>Bengali</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                
+                    <section class="sec2 educations">
+                        <div class="skewed-top"></div>
+                        <div class="container">
+                            <h1 class="">Educations</h1>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <h5>State University of Bangladesh</h5> <hr>
+                                    <h6>Bachelor of Science - BS, Computer Engineering</h6>
+                                    <p>2015 - 2019</p>
+                                    <p>2 Semester left</p>
+                                    <p>Activities and Societies: Computing Club, Development Club</p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <h5>Uttara Model College</h5> <hr>
+                                    <h6>HSC, Science</h6>
+                                    <p>2013 - 2015</p>
+                                    <p>Passed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec1 myWork text-white text-center">
+                        <div class="container">
+                            <h1 class="text-center pb-4">My work</h1>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+                                    <a href="https://bit.ly/2A2BW7R" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="/static/images/blog.png" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">Blog & Portfolio</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://bit.ly/2DYk2Xd" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="/static/images/food.png" alt="" width="100%">
+                                        <div class="overlay">
+                                            <div class="content">Food Services</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://bit.ly/2qT0Mmj" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="/static/images/touristPlace.png" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">Tourist Place</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://bit.ly/2qSQNNJ" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="/static/images/link.png" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">Link Page</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://bit.ly/2Uah9rV" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="/static/images/form.png" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">Responsive Contact Form</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6  col-md-4 mb-4">
+                                    <a href="https://bit.ly/2ToMzKV" target="_blank" class="">
+                                    <div class="thumbnails">
+                                        <img src="/static/images/web.png" alt="" width="100%">
+                                        <div class="overlay">
+                                        <div class="content">Responsive Website</div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <section class="sec2 contact text-center">
+                        <div class="skewed-top"></div>
+                        <div class="container">
+                            <h1 class="text-center">Contact</h1>
+                            <h6 class="pb-3"> GET IN TOUCH </h6>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                <div class="form">
+                                    <input type="text" class="form-control mb-3" placeholder="name">
+                                </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                <div class="form">
+                                    <input type="email" class="form-control mb-3" placeholder="email">
+                                </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                <div class="form">
+                                    <input type="text" class="form-control" placeholder="subject">
+                                </div>
+                                </div>
+                                <div class="col-xs-12 col-md-12 pt-2">
+                                <div class="form">
+                                    <textarea type="text" class="form-control" placeholder="message" rows="4" cols="50"></textarea>
+                                </div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-dark" type="submit">Send Message</button>
+                            <p class="pt-3 text-center">Email: sohanoor404@gmail.com</p>
+                            </div>
+                    </section>
+
+                    <section class="footer">
+                        <p class="text-white text-center pt-4 pb-1"> Follow Me </p>
+                        <ul>
+                            <li><a href="https://goo.gl/Gz72pg" target="_blank"><i class="fab fa-facebook-f facebook"></i></a></li>
+                            <li><a href="https://goo.gl/Ni8dGx" target="_blank"><i class="fab fa-github bg-dark"></i></a></li>
+                            <li><a href="https://goo.gl/Sgc5L8" target="_blank"><i class="fab fa-linkedin-in linkedin"></i></a></li>
+                        </ul> <hr>
+                    </section>
+                </form>
+
+<!--------------------------------------------------------Ahsan Start----------------------------------------------------------->
+                <form id="ahsan-form">
+                    <section class="showcase">
+                        <div class="container">
+                            <div class="content-heading">
+                                <h1 class="text-capitalize">I am
+                                <span class="ahsan" style="color: rgb(50, 146, 125)"></span>
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="skewed-top"></div>
+                    </section>
+    
+                    <section class="sec1 about">
+                        <div class="skewed-bottom"></div>
+                        <div class="container text-white mt-5">
+                        <div class="row pt-4">
+                            <div class="col-xs-12 col-md-7 pt-0 padding">
+                            <div class="photo"><img src="/static/images/ahsan.JPG" class="img" alt="ahsan"></div>
+                            </div>
+                            <div class="col-xs-12 col-md-5">
+                            <div class="">
+                                <h4>About Me</h4>
+                                <h5 class="display-6">Frontend Developer | Graphics Designer</h5> <hr>
+                                <p class="pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis cumque, necessitatibus sequi, dolores quia vel vero doloribus reprehenderit excepturi hic consectetur voluptatem veniam dolore, laudantium facere porro nam. Numquam, qui?
+
+                                <br><br>
+
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore odit odio ex assumenda numquam nesciunt porro laudantium quod eligendi, molestias ipsum ducimus aliquam. Distinctio doloribus quod corrupti commodi cupiditate magnam?
+                                </p>
+                
+                                <a href="images/resume-joy.jpg" class="btn btn-outline-info text-center mt-4 mb-4" style="width: 100%" download>Download CV</a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                
+                    <section class="sec2 experience">
+                        <div class="container">
+                            <div class="skewed"></div>
+                            <h1 class="pb-5">Experience</h1>
+
+                            <div class="experience-content">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <h5>Company Name</h5>
+                                        <p>Job Duration</p>
+
+                                        <h6>Postion</h6>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde ut corporis nobis consequatur ab iusto odio numquam quam inventore sint labore dolorum dignissimos vel corrupti doloremque quibusdam molestias praesentium, nihil beatae porro est distinctio quae nesciunt! Sequi ea vitae libero iusto modi delectus, culpa inventore voluptates autem, asperiores molestias?</p>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <h5>Company Name</h5>
+                                        <p>Job Duration</p>
+
+                                        <h6>Postion</h6>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde ut corporis nobis consequatur ab iusto odio numquam quam inventore sint labore dolorum dignissimos vel corrupti doloremque quibusdam molestias praesentium, nihil beatae porro est distinctio quae nesciunt! Sequi ea vitae libero iusto modi delectus, culpa inventore voluptates autem, asperiores molestias?</p>
+                                    </div>
+                                    
+                                    <!-- <div class="col-xs-12 col-md-6">    insert more experience inside this div    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <section class="sec1 skills text-white">
+                        <div class="container">
+                            <div class="skewed"></div>
+                            <h1 class="pb-5">My skills</h1>
+
+                            <div class="skill-content">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                    <div class="col-xs-12 col-md-3 pb-3"><h6 class="outline p-2">C Programming</h6></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <section class="sec2 accomplishment">
+                        <div class="container">
+                            <div class="skewed"></div>
+                            <h1 class="pb-5">Accomplishment</h1>
+
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="container">
+                                            <h4>Certifications</h4> <hr>
+
+                                            <h6>Certificate of Completion (Digital Marketing Workshop held at Creative IT Institute)</h6>
+                                            <p>Nov 2018 – Present</p>
+                                            <hr>
+                                            <h6>Certificate of Completion (Digital Marketing Workshop held at Creative IT Institute)</h6>
+                                            <p>Nov 2018 – Present</p>
+                                            <hr>
+                                            <h6>Certificate of Completion (Digital Marketing Workshop held at Creative IT Institute)</h6>
+                                            <p>Nov 2018 – Present</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <h4>Courses</h4> <hr>
+
+                                            <h6>Computer Hardware and Troubleshooting (5 months, from Computer Solution & Training Center, Dhaka)</h6>
+                                            <hr>
+                                            <h6>Diploma in Graphic Design (6th months, from National Youth & Training Center, Dhaka)</h6>
+                                            <hr>
+                                            <h6>Python OOP and Django Web Framework (4 months, from Khidmah IT, Dhaka)</h6>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <h4>Projects</h4> <hr>
+
+                                            <h6>Food Service (Distributive Architecture, Python-Django, JavaScript)</h6>
+                                            <p>Nov 2018 – Present</p>
+                                            <p>A Django powered open source web application for ordering homemade food cooked by housewives. This system will be based on the smartphone app in the future. It'll be also based on distributive architecture like Uber. We just developed the web version for a demo. It's my personal project maintaining by our team named 'DevsCave'. This application will be very helpful for the students of Dhaka city who are living outside from home and don't able to consume hommade food.</p>
+                                            <hr>
+                                            <h6>Blog Publications and Portfolio Management System (Python-Django, JavaScript)</h6>
+                                            <p>Aug 2018 – Present</p>
+                                            <p>A Django powered open source web application for publishing articles, videos and manages the personal portfolio. and in the debugging stage now. It's my personal project maintaining by our team named 'DevsCave'.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <h4>Honor & Award</h4> <hr>
+
+                                            <h6>Intra departmental junior programming contest award</h6>
+                                            <p>Feb 2017 - State University Computing Club</p> <br>
+                                            
+                                            <h4>Language</h4> <hr>
+
+                                            <h6>English, Bengali</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                
+                    <section class="sec1 educations text-white">
+                        <div class="container">
+                            <div class="skewed"></div>
+                            <h1 class="pb-5">Educations</h1>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <h5>State University of Bangladesh</h5> <hr>
+                                    <h6>Bachelor of Science - BS, Computer Engineering</h6>
+                                    <p>2015 - 2019</p>
+                                    <p>Activities and Societies: Computing Club, Development Club</p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <h5>State University of Bangladesh</h5> <hr>
+                                    <h6>Bachelor of Science - BS, Computer Engineering</h6>
+                                    <p>2015 - 2019</p>
+                                    <p>Activities and Societies: Computing Club, Development Club</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <section class="sec2 contact text-center">
+                        <div class="skewed"></div>
+                        <h1 class="pt-3">Contact</h1>
+                        <h6 class="pt-3"> GET IN TOUCH </h6>
+                        <div class="container pt-5">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4">
+                            <div class="form">
+                                <input type="text" class="form-control mb-3" placeholder="name">
+                            </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                            <div class="form">
+                                <input type="email" class="form-control mb-3" placeholder="email">
+                            </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                            <div class="form">
+                                <input type="text" class="form-control" placeholder="subject">
+                            </div>
+                            </div>
+                            <div class="col-xs-12 col-md-12 pt-2">
+                            <div class="form">
+                                <textarea type="text" class="form-control" placeholder="message" rows="4" cols="50"></textarea>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-dark" type="submit">Send Message</button>
+                        <p class="pt-3 text-center">Email: sohanoor404@gmail.com</p>
+                        </div>
+                    </section>
+
+                    <section class="footer">
+                        <p class="text-white text-center pt-4 pb-1"> Follow Me </p>
+                        <ul>
+                            <li><a href="https://goo.gl/Gz72pg" target="_blank"><i class="fab fa-facebook-f facebook"></i></a></li>
+                            <li><a href="https://goo.gl/Ni8dGx" target="_blank"><i class="fab fa-github bg-dark"></i></a></li>
+                            <li><a href="https://goo.gl/Sgc5L8" target="_blank"><i class="fab fa-linkedin-in linkedin"></i></a></li>
+                        </ul> <hr>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </div>
+<!--------------------------------------------------------Ahsan END----------------------------------------------------------->
+
+
+    <!-- Javascript -->
+    <script>
+        init();
+
+        function init() {
+            $("#siyam-button").css("border-bottom", "3px solid black");
+            $("#siyam-form").css("display", "block");
+        }
+
+        $("#siyam-button").on("click", function() {
+            $(this).css("border-bottom", "3px solid black");
+
+            $("#joy-button").css("border-bottom", "3px solid white");
+            $("#ahsan-button").css("border-bottom", "3px solid white");
+            
+            $("#joy-form").css("display", "none");
+            $("#ahsan-form").css("display", "none");
+            
+            $("#siyam-form").slideDown(500, function() {
+                $(this).css("display", "block");
+            });
+        });
+
+        $("#joy-button").on("click", function() {
+            $(this).css("border-bottom", "3px solid black");
+
+            $("#siyam-button").css("border-bottom", "3px solid white");
+            $("#ahsan-button").css("border-bottom", "3px solid white");
+
+            $("#siyam-form").css("display", "none");
+            $("#ahsan-form").css("display", "none")
+
+            $("#joy-form").slideDown(500, function() {
+                $(this).css("display", "block");
+            });
+        });
+        
+
+        $("#ahsan-button").on("click", function() {
+            $(this).css("border-bottom", "3px solid black");
+
+            $("#siyam-button").css("border-bottom", "3px solid white");
+            $("#joy-button").css("border-bottom", "3px solid white");
+
+            $("#siyam-form").css("display", "none");
+            $("#joy-form").css("display", "none")
+
+            $("#ahsan-form").slideDown(500, function() {
+                $(this).css("display", "block");
+            });
+        });
+    </script>
+    <script src="static/script/animation.js"></script>
+    <!-- typed.js text animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script type="text/javascript">
+        var typed = new Typed(".siyam", {
+        strings: ["Abdullah Al Galib", "Python Developer"],
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 50,
+        backDelay: 1000,
+        });
+        var typed = new Typed(".joy", {
+        strings: ["S. Rahman", "Frontend Developer", "Graphics Designer"],
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 50,
+        backDelay: 1000,
+        });
+        var typed = new Typed(".ahsan", {
+        strings: ["Ahsan Habib", "Backend Developer"],
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 50,
+        backDelay: 1000,
+        });
+    </script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
