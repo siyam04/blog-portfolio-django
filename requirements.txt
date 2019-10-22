@@ -12,7 +12,7 @@ gunicorn==19.9.0
 idna==2.6
 Markdown==2.6.11
 markdown2==2.3.5
-Pillow==5.1.0
+Pillow==6.2.0
 psycopg2==2.7.5
 pytz==2018.4
 requests==2.18.4
